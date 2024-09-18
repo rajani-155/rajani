@@ -1,0 +1,27 @@
+/* App.css */
+
+.bg-custom {
+	background-color: #ffffff; /* Customize this color as per your theme */
+  }
+  /* Add this to your App.css or main CSS file */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+  }
+  .card::after {
+	background: inherit;
+	inset:-10px;
+	scale: 0.8;
+	filter: blur(36px) brightness(1)
+	contrast(0.85) saturate(1.4);
+	z-index: 0;
+	transition: var(--t);
+
+  }
+
+  .card:hover::after{
+	scale: 0.9;
+	filter: blur(36px) brightness(1)
+	contrast(1) saturate(1);
+  }
