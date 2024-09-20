@@ -4,9 +4,9 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const app = express();
 const cors = require("cors");
-const connectDB = require("./config/dbConfig"); 
+const connectDB = require("./backend/config/dbConfig"); 
 require("dotenv").config();
-const portfolioRoute = require("./routes/portfolioRoute");
+const portfolioRoute = require("./backend/routes/portfolioRoute");
 const { sendEmail } = require("./sendEmail");
 const mongoose = require('mongoose');
 
@@ -32,7 +32,7 @@ app.post("/api/sendEmail", (req, res) => {
 });
 
 
-app.use('/auth', require('./routes/auth'));
+app.use('/auth', require('./backend/routes/auth'));
 
 const port = process.env.PORT || 5000;
 app.listen(port, () => {
